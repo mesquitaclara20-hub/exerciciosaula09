@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Avatar ilustrado de estudante de programação">
+  <circle cx="100" cy="100" r="96" fill="#1B2A4A" stroke="#0F8B8D" stroke-width="6"/>
+  <circle cx="100" cy="78" r="34" fill="#F2A541"/>
+  <path d="M44 172 C44 132, 156 132, 156 172" fill="#0F8B8D"/>
+  <rect x="70" y="68" width="24" height="14" rx="3" fill="none" stroke="#1B2A4A" stroke-width="3"/>
+  <rect x="106" y="68" width="24" height="14" rx="3" fill="none" stroke="#1B2A4A" stroke-width="3"/>
+  <line x1="94" y1="75" x2="106" y2="75" stroke="#1B2A4A" stroke-width="3"/>
+  <text x="100" y="162" font-family="Consolas, monospace" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">&lt;dev/&gt;</text>
+</svg>
+

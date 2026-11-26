@@ -1,0 +1,62 @@
+/* Reset inicial */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #1b2a4a;
+    font-family: Calibri, sans-serif;
+    font-size: 19px;
+}
+
+h1, h2, h3 {
+    font-family: Cambria, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: white
+} 
+header h1 { 
+ color: #f2a541;
+ margin-left: 16px;
+ text-decoration: none;
+}
+
+nav a {
+    color: #f2a541;
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+main {
+
+    padding: 20px;
+}
+
+.produtos {
+    display: flex;
+    gap: 20px; /* espaço entre os coards*/
+    flex-wrap: wrap; /* quebra de linha no celular*/
+}
+
+.card {
+    flex:1;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px; 
+    background-color: #0f8b8d;
+    color: #ffffff
+}

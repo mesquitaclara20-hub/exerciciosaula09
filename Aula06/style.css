@@ -1,0 +1,67 @@
+<!-- CSS pequeno, simples e todo comentado para alunos iniciantes -->
+    <style>
+        /* Estilo geral do corpo da página (fonte base 19px para leitura no projetor) */
+        body {
+            background-color: #F4F7FA; /* Cor de fundo clara */
+            color: #1B2A4A;            /* Cor do texto azul-marinho */
+            font-family: Calibri, sans-serif; /* Fonte Calibri para o texto */
+            font-size: 19px;           /* Tamanho da letra (>= 18px) */
+        }
+
+        /* Estilo do título principal (h1) */
+        h1 {
+            background-color: #1B2A4A; /* Fundo azul-marinho */
+            color: #FFFFFF;            /* Letra branca */
+            font-family: Cambria, serif; /* Fonte Cambria nos títulos */
+            font-size: 32px;           /* Tamanho do título principal */
+            text-align: center;        /* Centraliza o texto */
+            border: 3px solid #F2A541; /* Borda âmbar de destaque */
+        }
+
+        /* Estilo dos subtítulos (h2 e h3) */
+        h2, h3 {
+            color: #0F8B8D;            /* Cor verde-azulado */
+            font-family: Cambria, serif; /* Fonte Cambria */
+        }
+
+        /* Menu simples no topo da página */
+        .menu {
+            background-color: #0F8B8D; /* Fundo verde-azulado */
+            color: #FFFFFF;            /* Texto branco */
+            text-align: center;        /* Centraliza os links */
+            border: 2px solid #1B2A4A; /* Borda azul-marinho */
+        }
+
+        /* Links dentro do menu */
+        .menu a {
+            color: #FFFFFF;            /* Cor branca nos links do menu */
+        }
+
+        /* Caixa branca para cada tópico da aula */
+        .topico {
+            background-color: #FFFFFF; /* Fundo branco */
+            border: 2px solid #1B2A4A; /* Borda azul-marinho */
+        }
+
+        /* Bloco escuro para exibir os códigos de exemplo (<pre>) */
+        pre {
+            background-color: #1B2A4A; /* Fundo azul-marinho escuro */
+            color: #F2A541;            /* Letra âmbar para destacar o código */
+            border: 2px solid #0F8B8D; /* Borda verde-azulado */
+            font-size: 17px;           /* Tamanho da fonte do código */
+        }
+
+        /* Caixa que mostra o resultado renderizado logo abaixo do código */
+        .resultado {
+            background-color: #F8FAFC; /* Fundo cinza bem claro */
+            border: 2px dashed #0F8B8D;/* Borda tracejada verde-azulado */
+        }
+
+        /* Quadro de "Erros Comuns" em cada tópico */
+        .erros {
+            background-color: #FEF2F2; /* Fundo vermelho claro */
+            color: #7F1D1D;            /* Texto vermelho escuro */
+            border: 2px solid #DC2626; /* Borda vermelha */
+        }
+    
+        

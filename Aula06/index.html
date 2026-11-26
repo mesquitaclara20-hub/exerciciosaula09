@@ -1,0 +1,207 @@
+<!-- Declaração obrigatória do HTML5 -->
+<!DOCTYPE html>
+
+<!-- Início do documento em Português do Brasil -->
+<html lang="pt-BR">
+
+<!-- Cabeçalho de configurações da página -->
+<head>
+    <!-- Define a codificação UTF-8 para suportar acentos e "ç" -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Título que aparece na aba do navegador -->
+    <title>Aula 06: Hiperlinks, Imagens e CSS Inline — Técnico em Informática</title>
+
+    
+</head>
+
+<!-- Início do corpo visível da página -->
+<body>
+
+    <!-- Título principal da Aula 06 com id="topo" para âncora -->
+    <h1 id="topo">Aula 06: Hiperlinks, Imagens e Introdução ao CSS Inline (Técnico em Informática)</h1>
+
+    <!-- Menu no topo com links-âncora para cada tópico da aula -->
+    <p class="menu">
+        <strong>Menu da Aula 06:</strong>
+        <a href="../../Aula04/aula-html-basico/index.html">← Voltar para Aula 04</a> |
+        <a href="#topico-1">1. Hiperlinks (a)</a> |
+        <a href="#topico-2">2. Imagens (img)</a> |
+        <a href="#topico-3">3. CSS Inline (style)</a> |
+        <a href="exercicios/exercicios.html">Exercícios</a> |
+        <a href="desafio/desafio-perfil.html">Desafio Final: Meu Perfil</a>
+    </p>
+
+    <!-- Caixa de atalhos para os arquivos da pasta exemplos/ -->
+    <div class="topico">
+        <h2>📂 Arquivos de Exemplo desta Aula (Todos Comentados)</h2>
+        <ul>
+            <li><a href="exemplos/01-links.html">Exemplo 01: Hiperlinks e Âncoras (+ Página Destino)</a></li>
+            <li><a href="exemplos/02-imagens.html">Exemplo 02: Imagens e Acessibilidade (alt)</a></li>
+            <li><a href="exemplos/03-css-inline.html">Exemplo 03: Introdução ao CSS Inline</a></li>
+            <li><a href="exercicios/exercicios.html">Lista de Exercícios da Aula 06 (com Gabarito)</a></li>
+            <li><a href="desafio/desafio-perfil.html">Desafio Final Integrador: Página "Meu Perfil"</a></li>
+        </ul>
+    </div>
+    <br>
+
+    <!-- =================================================================
+         TÓPICO 1: HIPERLINKS (<a>)
+         ================================================================= -->
+    <div class="topico" id="topico-1">
+        <h2>1. Hiperlinks (&lt;a&gt;): Externos, Internos, Âncoras e mailto:</h2>
+
+        <!-- Explicação curta -->
+        <p>A tag <code>&lt;a&gt;</code> cria links clicáveis usando o atributo <code>href</code>:</p>
+        <ul>
+            <li><strong>Link externo:</strong> Aponta para outro site (usa <code>target="_blank"</code> e <code>rel="noopener"</code> para abrir em nova aba com segurança).</li>
+            <li><strong>Link interno:</strong> Abre outra página do nosso próprio site (ex.: <code>exemplos/pagina-destino.html</code>).</li>
+            <li><strong>Link para âncora (<code>#id</code>):</strong> Pula para um elemento na mesma página que tenha aquele <code>id</code>.</li>
+            <li><strong>E-mail (<code>mailto:</code>):</strong> Abre o programa de e-mail.</li>
+        </ul>
+
+        <!-- Código de exemplo -->
+        <p><strong>Código de exemplo:</strong></p>
+        <pre><code>&lt;!-- Link externo em nova aba --&gt;
+&lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener"&gt;
+    Documentação MDN (Nova Aba)
+&lt;/a&gt;
+
+&lt;!-- Link interno para outra página do projeto --&gt;
+&lt;a href="exemplos/pagina-destino.html"&gt;Abrir Página Destino&lt;/a&gt;
+
+&lt;!-- Link para âncora (#topo) e link de e-mail (mailto:) --&gt;
+&lt;a href="#topo"&gt;Ir para o Topo&lt;/a&gt;
+&lt;a href="mailto:contato@escola.edu.br"&gt;Enviar E-mail&lt;/a&gt;</code></pre>
+
+        <!-- Resultado renderizado -->
+        <p><strong>Resultado renderizado no navegador:</strong></p>
+        <div class="resultado">
+            <p>
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener">Documentação MDN (Nova Aba)</a> |
+                <a href="exemplos/pagina-destino.html">Abrir Página Destino</a> |
+                <a href="#topo">Ir para o Topo</a> |
+                <a href="mailto:contato@escola.edu.br">Enviar E-mail</a>
+            </p>
+        </div>
+
+        <!-- Quadro Erros Comuns -->
+        <div class="erros">
+            <h3>⚠️ Erros comuns neste tópico:</h3>
+            <ul>
+                <li>Esquecer o <code>https://</code> em links para sites externos.</li>
+                <li>Esquecer o símbolo <code>#</code> no link da âncora (ex.: escrever <code>href="topo"</code> em vez de <code>href="#topo"</code>).</li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- =================================================================
+         TÓPICO 2: IMAGENS (<img>) E ACESSIBILIDADE
+         ================================================================= -->
+    <div class="topico" id="topico-2">
+        <h2>2. Imagens (&lt;img&gt;) e Acessibilidade (Atributo alt)</h2>
+
+        <!-- Explicação curta -->
+        <p>A tag <code>&lt;img&gt;</code> é uma tag vazia (não tem fechamento) e usa:</p>
+        <ul>
+            <li><code>src</code>: Caminho da imagem (prefira o <strong>caminho relativo</strong> da pasta do projeto, como <code>img/codigo-html.svg</code>).</li>
+            <li><code>alt</code>: <strong>Texto alternativo de acessibilidade</strong> (lido por leitores de tela para pessoas com deficiência visual e exibido se a imagem falhar).</li>
+            <li><code>width</code> e <code>height</code>: Largura e altura em pixels.</li>
+            <li><strong>Imagem dentro de link:</strong> Coloque o <code>&lt;img&gt;</code> dentro da tag <code>&lt;a&gt;...&lt;/a&gt;</code>.</li>
+        </ul>
+
+        <!-- Código de exemplo -->
+        <p><strong>Código de exemplo:</strong></p>
+        <pre><code>&lt;!-- Imagem simples com alt, width e height --&gt;
+&lt;img src="img/codigo-html.svg" alt="Janela de código HTML5" width="300" height="165"&gt;
+
+&lt;!-- Imagem clicável dentro de um link --&gt;
+&lt;a href="exemplos/pagina-destino.html"&gt;
+    &lt;img src="img/banner-curso.svg" alt="Banner Técnico em Informática" width="280" height="157"&gt;
+&lt;/a&gt;</code></pre>
+
+        <!-- Resultado renderizado -->
+        <p><strong>Resultado renderizado no navegador:</strong></p>
+        <div class="resultado">
+            <img src="img/codigo-html.svg" alt="Janela de código HTML5" width="300" height="165">
+            <a href="exemplos/pagina-destino.html">
+                <img src="img/banner-curso.svg" alt="Banner Técnico em Informática" width="280" height="157">
+            </a>
+        </div>
+
+        <!-- Quadro Erros Comuns -->
+        <div class="erros">
+            <h3>⚠️ Erros comuns neste tópico:</h3>
+            <ul>
+                <li>Deixar a imagem sem o atributo <code>alt</code> (prejudica a acessibilidade).</li>
+                <li>Errar o caminho da pasta no <code>src</code> (ex.: esquecer <code>../</code> quando está dentro de uma subpasta).</li>
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- =================================================================
+         TÓPICO 3: INTRODUÇÃO AO CSS INLINE
+         ================================================================= -->
+    <div class="topico" id="topico-3">
+        <h2>3. Introdução ao CSS Inline (Atributo style)</h2>
+
+        <!-- Explicação curta -->
+        <p>
+            Usamos o atributo <code>style="propriedade: valor;"</code> para aplicar estilos visuais básicos:
+        </p>
+        <ul>
+            <li><code>color</code>: Cor da letra (ex.: <code>color: #1B2A4A;</code>)</li>
+            <li><code>background-color</code>: Cor de fundo (ex.: <code>background-color: #FFF3CD;</code>)</li>
+            <li><code>font-size</code>: Tamanho da fonte (ex.: <code>font-size: 22px;</code>)</li>
+            <li><code>font-family</code>: Tipo de fonte (ex.: <code>font-family: Cambria, serif;</code>)</li>
+            <li><code>text-align</code>: Alinhamento do texto (<code>left</code>, <code>center</code>, <code>right</code>)</li>
+            <li><code>width</code>: Largura da caixa (ex.: <code>width: 500px;</code>)</li>
+            <li><code>border</code>: Borda (ex.: <code>border: 2px solid #F2A541;</code>)</li>
+        </ul>
+
+        <!-- Código de exemplo -->
+        <p><strong>Código de exemplo:</strong></p>
+        <pre><code>&lt;p style="color: #1B2A4A; background-color: #FFF3CD; font-size: 20px; font-family: Cambria, serif; text-align: center; width: 500px; border: 2px solid #F2A541;"&gt;
+    Parágrafo estilizado com CSS Inline!
+&lt;/p&gt;</code></pre>
+
+        <!-- Resultado renderizado -->
+        <p><strong>Resultado renderizado no navegador:</strong></p>
+        <div class="resultado">
+            <p style="color: #1B2A4A; background-color: #FFF3CD; font-size: 20px; font-family: Cambria, serif; text-align: center; width: 500px; border: 2px solid #F2A541;">
+                Parágrafo estilizado com CSS Inline!
+            </p>
+        </div>
+
+        <!-- Quadro Erros Comuns -->
+        <div class="erros">
+            <h3>⚠️ Erros comuns neste tópico:</h3>
+            <ul>
+                <li>Esquecer o ponto e vírgula (<code>;</code>) entre uma propriedade e outra no <code>style</code>.</li>
+                <li>Usar sinal de igual (<code>=</code>) em vez de dois-pontos (<code>:</code>) dentro do <code>style</code>.</li>
+            </ul>
+        </div>
+
+        <!-- Explicação final sobre CSS interno/externo -->
+        <p style="background-color: #E0F2F1; border: 2px solid #0F8B8D;">
+            <strong>Por que o CSS inline não é a melhor prática em sites grandes?</strong> Porque repetir <code>style="..."</code> em todas as tags dá muito trabalho para manter. Nas próximas aulas usaremos o <strong>CSS Interno</strong> (tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>, como fizemos no topo desta página) e o <strong>CSS Externo</strong> (arquivo <code>.css</code> separado)!
+        </p>
+    </div>
+
+    <!-- Rodapé com links de navegação -->
+    <p class="menu">
+        <a href="#topo">Voltar ao Topo ↑</a> |
+        <a href="../../Aula04/aula-html-basico/index.html">← Voltar para a Aula 04</a> |
+        <a href="exercicios/exercicios.html">Exercícios da Aula 05</a> |
+        <a href="desafio/desafio-perfil.html">Desafio Final: Meu Perfil →</a>
+    </p>
+
+<!-- Fim do corpo da página -->
+</body>
+
+<!-- Fim do documento HTML -->
+</html>
